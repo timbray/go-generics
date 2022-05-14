@@ -18,7 +18,9 @@ type fish struct {
 type fishTank container[fish]
 
 func (t *fishTank) fishCount() string {
-	// following doesn't compile, "Unresolved reference 'size'"
+	// following doesn't compile:
+	// 1. Unresolved reference 'size'
+	// 2. t.size undefined (type *fishTank has no field or method size)
 	return fmt.Sprintf("How many fishies? %d!", t.size())
 }
 
