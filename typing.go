@@ -73,6 +73,6 @@ type comparableFlexibleFish interface {
 }
 
 // won't compile for two reasons:
-// 1. "interface includes constraint elements, can only be used in type parameters
-// 2. "interface is (or embeds) comparable"
+// 1. interface includes constraint elements, can only be used in type parameters
+// 2. interface is (or embeds) comparable
 type comparableFlexibleFishTank container[comparableFlexibleFish]
